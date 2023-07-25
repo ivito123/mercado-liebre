@@ -1,0 +1,310 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+.display_flex {
+  display: flex;
+}
+.align_center {
+  align-items: center;
+}
+.justify_center {
+  justify-content: center;
+}
+.oculto {
+  display: none;
+}
+
+/*BODY */
+
+body {
+  font-family: Roboto;
+  font-size: 12px;
+  background-color: #ebebeb;
+}
+/* HEADER */
+
+header {
+  background-color: #eac926;
+  padding: 10px;
+  margin: 0;
+}
+
+#barra_busqueda {
+  margin-top: 6px;
+  width: 100%;
+  
+}
+#input_busqueda {
+  width: 100%;
+}
+#search-icon {
+  font-size: 10px;
+  padding: 4px;
+  border: solid black 1px;
+  background-color: #ebebeb;
+  border-radius: 3px;
+  
+}
+#icon_hand {
+  margin-right: 2px;
+}
+#frase_cuotas {
+  margin: 10px; 
+}
+div.div_cliente {
+  margin: 0;
+}
+#icon_2 {
+  margin-left: 2px;
+}
+
+#menu_hamb {
+  height: 30px;
+  width: 30px;
+  background-color: blue;
+  border-radius: 5px;
+}
+#icon-hamb {
+  font-size: 18px;
+  color: white;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/*MAIN*/
+
+
+
+
+div#productos {
+  width: 90vw;
+  margin: auto;
+}
+.img_banner {
+  top: 0px;
+  width: 100%;
+}
+h3.titulares {
+  padding-left: 10px;
+  justify-content: flex-start;
+  color: #666;
+  font-size: 24px;
+}
+#seccion_productos,
+#seccion_ofertas {
+  background-color: #ebebeb;
+  margin-top: 20px;
+}
+#seccion_productos img,
+#seccion_ofertas img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.product {
+  width: 100%;
+  background-color: white;
+  margin-bottom: 10px;
+  position: relative;
+}
+.product img {
+  border-bottom: 2px solid #ebebeb;
+}
+.precio_desc {
+  display: flex;
+  height: 30px;
+  align-items: baseline;
+}
+.precios {
+  margin: 0px;
+  font-size: 18px;
+  height: 30px;
+  width: 30%;
+  text-align: center;
+}
+.descuentos {
+  margin: 0px;
+  font-size: 16px;
+  color: #39b54a;
+  height: 30px;
+  width: 70%;
+  justify-content: center;
+}
+main div article i {
+  display: block;
+  font-size: 15px;
+  padding: 5px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid green;
+  color: green;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  right: 20px;
+  bottom: 15px;
+}
+.descripciones {
+  display: none;
+}
+
+/*FOOTER*/
+footer {
+
+  padding: 30px;
+  display: flex;
+  text-align: center;
+  background-color: white;
+}
+.icon-footer {
+  font-size: 2em;
+  color: rgb(17, 17, 111);
+  margin-bottom: 10px;
+}
+
+footer h4 {
+  font-size: 18px;
+  color: #666;
+}
+
+footer p {
+  color: #666;
+  margin-bottom: 40px;
+}
+div#copyright p {
+  text-align: left;
+}
+
+/* ------------------MEDIA QUERIES-------------------- */
+@media (min-width: 361px) {
+
+  .descripciones {
+    display: block;
+    text-align: center;
+    font-size: 16px;
+  }
+ 
+  .oculto {
+    display: block;
+  }
+  #menu_hamb {
+    display: none;
+  }
+  main div article i {
+    right: 30px;
+    bottom: 55px;
+  }
+  .footer{
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+@media (min-width: 769px) {
+
+
+  #logo{
+   flex-basis: 200px;
+  }
+  .busqueda-general{
+    display: flex;
+    
+    
+  }
+  .contenedor_productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  article.product {
+    width: 40%;
+    margin: 10px auto;
+    height: max-content;
+    padding: 20px;
+  }
+  #seccion_productos img,
+  #seccion_ofertas img {
+    object-fit: cover;
+    height: 85%;
+  }
+  #busqueda {
+    display: flex;
+    margin-bottom: 15px;
+  }
+  
+  #nav_bar nav {
+    justify-content: space-between;
+  }
+  #nav_bar nav ul {
+    width: auto;
+    margin: 0 30px;
+  }
+  #nav_bar nav ul li {
+    margin-left: 20px;
+  }
+  ul#menu_principal {
+    justify-content: flex-start;
+  }
+  ul#menu_cliente {
+    justify-content: flex-end;
+  }
+   /* .product {
+    box-shadow: 0px 0px 10px 0px rgb(100, 100, 100);
+  } */
+}
+@media (min-width: 1024px) {
+  #frase_cuotas{
+    width: 400px;
+    padding-top: 20px;
+  }
+
+  #nav_bar{
+    padding-top: 40px;
+  }
+
+  #input_busqueda{
+    width: 300px;
+  }
+ 
+  #logo{
+    width: 300px;
+  }
+  article.product {
+    width: 22%;
+    height: max-content;
+  }
+  main div article i {
+    bottom: 40px;
+  }
+  .precios,
+  .descuentos {
+    width: 50%;
+    padding-top: 10px;
+  }
+  
+.descripciones{
+  display: none;
+}
+  
+  
+  .product:hover{
+     box-shadow: 0px 0px 10px 0px rgb(100, 100, 100);
+     .descripciones{
+      display: block;
+     }
+     .fa-truck {
+      bottom: 60px;
+      transform: rotateZ(270deg);
+    }
+
+  }
+  .icon-footer:hover{
+    color: #025f05;
+  }
+}

@@ -1,0 +1,258 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+  }
+  .display_flex {
+    display: flex;
+  }
+  .align_center {
+    align-items: center;
+  }
+  .justify_center {
+    justify-content: center;
+  }
+  .oculto {
+    display: none;
+  }
+  
+  /*BODY */
+  
+  body {
+    font-family: Roboto;
+    font-size: 12px;
+    background-color: #ebebeb;
+  }
+
+
+
+header {
+    background-color: #eac926;
+    padding: 10px;
+    margin: 0;
+  }
+  
+  #barra_busqueda {
+    margin-top: 6px;
+    width: 100%;
+    
+  }
+  #input_busqueda {
+    width: 100%;
+  }
+  #search-icon {
+    font-size: 10px;
+    padding: 4px;
+    border: solid black 1px;
+    background-color: #ebebeb;
+    border-radius: 3px;
+    
+  }
+  #icon_hand {
+    margin-right: 2px;
+  }
+  #frase_cuotas {
+    margin: 10px; 
+  }
+  div.div_cliente {
+    margin: 0;
+  }
+  #icon_2 {
+    margin-left: 2px;
+  }
+  
+  #menu_hamb {
+    height: 30px;
+    width: 30px;
+    background-color: blue;
+    border-radius: 5px;
+  }
+  #icon-hamb {
+    font-size: 18px;
+    color: white;
+  }
+  ul {
+    list-style: none;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
+
+
+/* MAIN  */
+.img_banner {
+    top: 0px;
+    width: 100%;
+  }
+
+
+   
+ 
+  h1 {
+    color: #000000;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.registro {
+    max-width: 600px;
+    margin: 30px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: grid;
+    gap: 10px;
+}
+
+label {
+    color: #000000;
+    font-weight: bold;
+    
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+input[type="tel"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.two-columns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    background-color: #eac926;
+    color: #000000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    color: white;
+    background-color: #4b3f06;
+}
+
+
+
+.numero {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Divide el formulario en dos columnas */
+    gap: 10px;
+}
+
+
+
+.mensaje-exitoso {
+    display: none;
+   position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #6ca070;
+    color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    z-index: 999; /* Para asegurarnos de que aparezca por encima de todo */
+}
+
+.volver-btn {
+    background-color: #eac926;
+    color: #000000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.volver-btn:hover {
+    color: white;
+    background-color: #4b3f06;
+}
+
+
+
+  /* QUERIES  */
+
+
+  @media (min-width: 700px) {
+
+    .oculto {
+      display: block;
+    }
+    #menu_hamb {
+      display: none;
+    }
+ 
+  }
+  @media (min-width: 700px) {
+  
+  
+    #logo{
+     flex-basis: 200px;
+    }
+    .busqueda-general{
+      display: flex;
+      
+      
+    }
+    #busqueda {
+      display: flex;
+      margin-bottom: 15px;
+    }
+    
+    #nav_bar nav {
+      justify-content: space-between;
+    }
+    #nav_bar nav ul {
+      width: auto;
+      margin: 0 30px;
+    }
+    #nav_bar nav ul li {
+      margin-left: 20px;
+    
+    }
+  }
+  @media (min-width: 1024px) {
+    #frase_cuotas{
+      width: 400px;
+      padding-top: 20px;
+    }
+  
+    #nav_bar{
+      padding-top: 40px;
+    }
+  
+    #input_busqueda{
+      width: 300px;
+    }
+   
+    #logo{
+      width: 300px;
+    }
+
+  }
