@@ -17,57 +17,34 @@
 <body>
 
     <header>
-        <div class="busqueda-general">
-          <img src="/images/logo-mercado-liebre.svg" alt="Logo del sitio" id="logo" />
-          <div id="busqueda">
-              <div id="barra_busqueda" class="display_flex align_center justify_center">
-                  <form action="#" method="POST">
-                      <input id="input_busqueda" type="search" placeholder="Productos, marcas o otros">
-                  </form>
-                  <div>
-                      <i class="fas fa-search" id="search-icon"></i>
-                  </div>
-              </div>
-              <div id="frase_cuotas" class="display_flex justify_center">
-                  <i class="fas fa-hand-holding-usd" id="icon_hand"></i>
-                  <p>Comprá en cuotas y sin tarjeta de crédito</p>
-              </div>
-          </div>
+        <div class="logo-busqueda">
+           <img src="images/logo-mercado-liebre.svg" alt="Logo" class="logo-ml" > 
+                <form action="#" method="post" class="barra-busqueda">
+                    <input type="text" name="busqueda" id="busqueda" placeholder="Barra de busqueda" >
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </form>
+                
+                <p class="titulo-cuotas"><i class="fas fa-hand-holding-usd"></i>Comprá en cuotas y sin tarjeta de crédito</p>
         </div>
-  
-          <div id="nav_bar" class="oculto">
-              <nav class=" display_flex">
-                  <ul class="display_flex" id="menu_principal">
-                      <li><a href="">Ofertas</a></li>
-                      <li><a href="">Tiendas Oficiales</a></li>
-                      <li><a href="">Vender</a></li>
-                      <li><a href="">Ayuda</a></li>
-                      </br>
-                  </ul>
-                  <ul class="display_flex" id="menu_cliente"> 
-                      <div class="display_flex" class="div_cliente">
-                          <li><a href="">Creá tu cuenta</a></li>
-                          <i class="far fa-id-card" id="icon_2"></i>
-                      </div>
-                      <div class="display_flex" class="div_cliente">
-                          <li><a href="">Ingresá</a></li>
-                          <i class="fas fa-sign-in-alt" id="icon_2"></i>
-                      </div>
-                      <div class="display_flex" class="div_cliente">
-                          <li><a href="">Mis compras</a></li>
-                          <i class="fas fa-shopping-basket" id="icon_2"></i>
-                      </div>
-                  </ul>
-          </div>
-          <div class="burger-menu display_flex justify_center">
-              <div id="menu_hamb" class="display_flex align_center justify_center">
-                  <i class="fas fa-bars" id="icon-hamb"></i>
-              </div>
-          </div>
-          </nav>
+        <div class="listas">
+            <ul class="lista-ofertas">
+                <li><a href="">Ofertas</a></li>
+                <li><a href="">Tiendas Oficiales</a></li>
+                <li><a href="">Vender</a></li>
+                <li><a href="">Ayuda</a></li>
+            </ul>
+            <br>
+            <ul class="lista-cuenta">
+                <li><a href="/register">Creá tu cuenta <i class="fas fa-credit-card"></i></a></li>
+                <li><a href="/login">Ingresá <i class="fas fa-sign-in-alt"></i></a></li>
+                <li><a href="">Mis compras <i class="fas fa-shopping-basket"></i></a></li>
+            </ul>
+        </div>
 
-
-  </header>
+        <div class="burger-menu">
+            <i class="fas fa-bars hamburguesa"></i>
+        </div>
+    </header>
 
 <main>
 

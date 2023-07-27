@@ -25,57 +25,88 @@ body {
 }
 /* HEADER */
 
+
 header {
-  background-color: #eac926;
-  padding: 10px;
-  margin: 0;
+  overflow: hidden;
+  background: #EAC926;
+  padding: 20px 0;
 }
 
-#barra_busqueda {
-  margin-top: 6px;
-  width: 100%;
-  
-}
-#input_busqueda {
-  width: 100%;
-}
-#search-icon {
-  font-size: 10px;
-  padding: 4px;
-  border: solid black 1px;
-  background-color: #ebebeb;
-  border-radius: 3px;
-  
-}
-#icon_hand {
-  margin-right: 2px;
-}
-#frase_cuotas {
-  margin: 10px; 
-}
-div.div_cliente {
-  margin: 0;
-}
-#icon_2 {
-  margin-left: 2px;
+
+.burger-menu {
+  text-align: center;
 }
 
-#menu_hamb {
-  height: 30px;
-  width: 30px;
+.hamburguesa {
   background-color: blue;
+  color: white;
+  padding: 10px;
   border-radius: 5px;
 }
-#icon-hamb {
-  font-size: 18px;
-  color: white;
+
+.titulo-cuotas {
+  text-align: center;
+  margin: 10px 0;
+  width: 100%;
 }
-ul {
-  list-style: none;
+
+.logo-busqueda {
+  display: flex;
+  flex-wrap: wrap;
 }
-a {
+
+
+.logo-ml {
+  padding: 0 10px;
+  width: 50%;
+}
+
+.barra-busqueda {
+  display: flex;
+  width: 50%;
+  padding: 0 10px;
+}
+
+form.barra-busqueda input {
+  width: 100%;
+  border-radius: 10px 0 0 10px;
+  padding: 10px;
+  border: none;
+  outline: none;
+  height: 20px;
+}
+
+form.barra-busqueda input:target {
+  outline: none;
+}
+
+form.barra-busqueda button[type="submit"]{
+  border-radius: 0 10px 10px 0;
+  border: none;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 2px;
+  height: 20px;
+  
+}
+
+.lista-ofertas li a,
+.lista-cuenta li a {
   text-decoration: none;
   color: black;
+}
+
+.lista-ofertas,
+.lista-cuenta {
+  display: none;
+  list-style: none;
+}
+
+
+.titulo-cuotas {
+  text-align: center;
+  margin: 10px 0;
+  width: 100%;
 }
 
 /*MAIN*/
@@ -156,34 +187,83 @@ main div article i {
 }
 
 /*FOOTER*/
-footer {
-
-  padding: 30px;
-  display: flex;
+footer{
   text-align: center;
   background-color: white;
 }
+
+.footer-general {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: white;
+}
+
 .icon-footer {
   font-size: 2em;
   color: rgb(17, 17, 111);
   margin-bottom: 10px;
 }
 
-footer h4 {
+.footer-general h4 {
+  padding-top: 20px;
   font-size: 18px;
   color: #666;
 }
 
-footer p {
+.footer-general p {
+  padding-bottom: 20px;
+ 
   color: #666;
-  margin-bottom: 40px;
+ 
 }
 div#copyright p {
   text-align: left;
+  padding-top: 40px;
 }
 
 /* ------------------MEDIA QUERIES-------------------- */
-@media (min-width: 361px) {
+@media (min-width: 425px) {
+
+  .lista-ofertas,
+  .lista-cuenta {
+      display: block;
+  }
+
+  .titulo-cuotas {
+      width: 33%;
+      justify-content: center;
+      align-self: center;
+  }
+
+  header .hamburguesa {
+      display: none;
+  }
+
+  .logo-ml {
+      width: 33%;
+  }
+
+  .barra-busqueda {
+      width: 33%;
+      height: 30px;
+      justify-content: center;
+      align-self: center;
+  }
+
+  .listas {
+      display: flex;
+      justify-content: space-between;
+  }
+
+  .lista-cuenta,
+  .lista-ofertas {
+      margin: 20px 20px 0 20px;
+      display: flex;
+      gap: 15px;
+      align-items: space-between;
+  }
 
   .descripciones {
     display: block;
@@ -194,21 +274,40 @@ div#copyright p {
   .oculto {
     display: block;
   }
-  #menu_hamb {
-    display: none;
-  }
+ 
   main div article i {
     right: 30px;
-    bottom: 55px;
+    bottom: 40px;
   }
-  .footer{
-    display: flex;
-    flex-wrap: wrap;
-  }
+  .product:hover{
+    box-shadow: 0px 0px 10px 0px rgb(100, 100, 100);
+    .descripciones{
+     margin-top: 30px;
+     display: block;
+    }
+    .fa-truck {
+     
+     
+     bottom: 85px;
+     transform: rotateZ(270deg);
+   }
+
+ }
+ .opciones:hover{
+   .icon-footer{
+     color: #025f05;
+   }
+   
+ }
+  
 }
+
 @media (min-width: 769px) {
 
-
+.footer{
+  display: flex;
+  flex-direction: row;
+}
   #logo{
    flex-basis: 200px;
   }
@@ -259,6 +358,10 @@ div#copyright p {
   } */
 }
 @media (min-width: 1024px) {
+  .footer{
+    display: flex;
+    flex-direction: row;
+  }
   #frase_cuotas{
     width: 400px;
     padding-top: 20px;
@@ -291,20 +394,28 @@ div#copyright p {
 .descripciones{
   display: none;
 }
-  
+  .footer-general{
+    flex-direction: row;
+  }
   
   .product:hover{
      box-shadow: 0px 0px 10px 0px rgb(100, 100, 100);
      .descripciones{
+      margin-top: 30px;
       display: block;
      }
      .fa-truck {
-      bottom: 60px;
+      
+      
+      bottom: 85px;
       transform: rotateZ(270deg);
     }
 
   }
-  .icon-footer:hover{
-    color: #025f05;
+  .opciones:hover{
+    .icon-footer{
+      color: #025f05;
+    }
+    
   }
 }

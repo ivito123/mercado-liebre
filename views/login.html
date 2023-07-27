@@ -17,58 +17,34 @@
 
 <body>
     <header>
-      <div class="busqueda-general">
-        <img src="/images/logo-mercado-liebre.svg" alt="Logo del sitio" id="logo" />
-        <div id="busqueda">
-            <div id="barra_busqueda" class="display_flex align_center justify_center">
-                <form action="#" method="POST">
-                    <input id="input_busqueda" type="search" placeholder="Productos, marcas o otros">
+        <div class="logo-busqueda">
+            <img src="images/logo-mercado-liebre.svg" alt="Logo" class="logo-ml">
+                <form action="#" method="post" class="barra-busqueda">
+                    <input type="text" name="busqueda" id="busqueda" placeholder="Barra de busqueda" >
+                    <button type="submit"><i class="fas fa-search"></i></button>
                 </form>
-                <div>
-                    <i class="fas fa-search" id="search-icon"></i>
-                </div>
-            </div>
-            <div id="frase_cuotas" class="display_flex justify_center">
-                <i class="fas fa-hand-holding-usd" id="icon_hand"></i>
-                <p>Comprá en cuotas y sin tarjeta de crédito</p>
-            </div>
+                
+                <p class="titulo-cuotas"><i class="fas fa-hand-holding-usd"></i>Comprá en cuotas y sin tarjeta de crédito</p>
         </div>
-      </div>
+        <div class="listas">
+            <ul class="lista-ofertas">
+                <li><a href="">Ofertas</a></li>
+                <li><a href="">Tiendas Oficiales</a></li>
+                <li><a href="">Vender</a></li>
+                <li><a href="">Ayuda</a></li>
+            </ul>
+            <br>
+            <ul class="lista-cuenta">
+                <li><a href="/register">Creá tu cuenta <i class="fas fa-credit-card"></i></a></li>
+                <li><a href="/login">Ingresá <i class="fas fa-sign-in-alt"></i></a></li>
+                <li><a href="">Mis compras <i class="fas fa-shopping-basket"></i></a></li>
+            </ul>
+        </div>
 
-        <div id="nav_bar" class="oculto">
-            <nav class=" display_flex">
-                <ul class="display_flex" id="menu_principal">
-                    <li><a href="">Ofertas</a></li>
-                    <li><a href="">Tiendas Oficiales</a></li>
-                    <li><a href="">Vender</a></li>
-                    <li><a href="">Ayuda</a></li>
-                    </br>
-                </ul>
-                <ul class="display_flex" id="menu_cliente"> 
-                    <div class="display_flex" class="div_cliente">
-                        <li><a href="/register">Creá tu cuenta</a></li>
-                        <i class="far fa-id-card" id="icon_2"></i>
-                    </div>
-                    <div class="display_flex" class="div_cliente">
-                        <li><a href="/login">Ingresá</a></li>
-                        <i class="fas fa-sign-in-alt" id="icon_2"></i>
-                    </div>
-                    <div class="display_flex" class="div_cliente">
-                        <li><a href="">Mis compras</a></li>
-                        <i class="fas fa-shopping-basket" id="icon_2"></i>
-                    </div>
-                </ul>
+        <div class="burger-menu">
+            <i class="fas fa-bars hamburguesa"></i>
         </div>
-        <div class="burger-menu display_flex justify_center">
-            <div id="menu_hamb" class="display_flex align_center justify_center">
-                <i class="fas fa-bars" id="icon-hamb"></i>
-            </div>
-        </div>
-        </nav>
-</body>
-
-</html>
-</header>
+    </header>
 
  <img src="/images/img-home-banner.jpg" alt="" class="img_banner">
 <main>
@@ -77,7 +53,7 @@
 
     <div class="login-container">
         <h1>Iniciar Sesión</h1>
-        <form action="/procesar_login" method="post">
+        <form id="formularioLogin" action="/procesar_registro" method="post" onsubmit="return mostrarRegistroExitoso()" class="registro">
             <label for="email">Correo Electrónico:</label>
             <input type="email" id="email" name="email" required>
 
@@ -87,4 +63,33 @@
             <input type="submit" value="Iniciar Sesión">
         </form>
     </div>
+
+<div class="mensaje-exitoso" id="mensajeExito">
+    <p>¡Sesion Iniciada!</p>
+    <button class="volver-btn" onclick="volverAlInicio()">Volver al inicio</button>
+</div>
+
 </main>
+
+<script>
+      function mostrarRegistroExitoso() {
+        // Aquí puedes agregar cualquier lógica de validación del formulario antes de mostrar el mensaje.
+        // Por ejemplo, puedes verificar que todos los campos obligatorios estén completos.
+
+        // Ocultar el formulario de registro
+        var formulario = document.getElementById('formularioLogin');
+        formulario.style.display = 'none';
+
+        // Mostrar el mensaje de registro exitoso
+        var mensajeExito = document.getElementById('mensajeExito');
+        mensajeExito.style.display = 'block';
+
+        // Retornar "false" para detener el envío del formulario.
+        return false;
+    }
+
+    function volverAlInicio() {
+        // Redirigir al inicio (cambia 'index.html' por la página de inicio deseada)
+        window.location.href = '/';
+    }
+</script>
