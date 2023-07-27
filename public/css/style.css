@@ -224,7 +224,7 @@ div#copyright p {
 }
 
 /* ------------------MEDIA QUERIES-------------------- */
-@media (min-width: 500px) {
+@media (min-width: 400px) {
 
   .lista-ofertas,
   .lista-cuenta {
