@@ -283,12 +283,14 @@ div#copyright p {
     .descripciones{
      margin-top: 30px;
      margin-bottom: 20px;
+     text-align: center;
+     font-size: 23px;
      display: block;
     }
     .fa-truck {
      
      
-     bottom: 75px;
+     bottom: 85px;
      transform: rotateZ(270deg);
    }
 
@@ -361,6 +363,7 @@ div#copyright p {
     .descripciones{
      margin-top: 30px;
      display: block;
+
     }
     .fa-truck {
      
