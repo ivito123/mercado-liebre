@@ -266,9 +266,8 @@ div#copyright p {
   }
 
   .descripciones {
-    display: block;
-    text-align: center;
-    font-size: 16px;
+    display: none;
+    
   }
  
   .oculto {
@@ -289,7 +288,7 @@ div#copyright p {
     .fa-truck {
      
      
-     bottom: 85px;
+     bottom: 75px;
      transform: rotateZ(270deg);
    }
 
