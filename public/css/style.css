@@ -281,14 +281,14 @@ div#copyright p {
   .product:hover{
     box-shadow: 0px 0px 10px 0px rgb(100, 100, 100);
     .descripciones{
-     margin-top: 30px;
+     padding-top: 30px;
      padding-bottom: 20px;
      text-align: center;
-     font-size: 23px;
+     font-size: 17px;
      display: block;
     }
     .fa-truck {
-     bottom: 95px;
+   bottom: 90px;
      transform: rotateZ(270deg);
    }
 
@@ -366,7 +366,7 @@ div#copyright p {
     .fa-truck {
      
      
-     bottom: 65px;
+     bottom: 170px;
      transform: rotateZ(270deg);
    }
 
