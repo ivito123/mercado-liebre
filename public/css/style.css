@@ -276,7 +276,7 @@ div#copyright p {
  
   main div article i {
     right: 30px;
-    bottom: 40px;
+    bottom: 19px;
   }
   .product:hover{
     box-shadow: 0px 0px 10px 0px rgb(100, 100, 100);
@@ -288,9 +288,7 @@ div#copyright p {
      display: block;
     }
     .fa-truck {
-     
-     
-     bottom: 55px;
+     bottom: 95px;
      transform: rotateZ(270deg);
    }
 
