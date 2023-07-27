@@ -224,7 +224,7 @@ div#copyright p {
 }
 
 /* ------------------MEDIA QUERIES-------------------- */
-@media (min-width: 400px) {
+@media (min-width: 450px) {
 
   .lista-ofertas,
   .lista-cuenta {
@@ -290,7 +290,7 @@ div#copyright p {
     .fa-truck {
      
      
-     bottom: 95px;
+     bottom: 55px;
      transform: rotateZ(270deg);
    }
 
