@@ -232,6 +232,7 @@ div#copyright p {
   }
 
   .titulo-cuotas {
+    font-size: 16px;
       width: 33%;
       justify-content: center;
       align-self: center;
@@ -259,6 +260,7 @@ div#copyright p {
 
   .lista-cuenta,
   .lista-ofertas {
+    font-size: 16px;
       margin: 20px 20px 0 20px;
       display: flex;
       gap: 15px;
